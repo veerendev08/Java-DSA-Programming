@@ -26,13 +26,16 @@ public class ConcatenationofArray {
             nums[i] = sc.nextInt();
         }
         
+        int ans[] = concatenation(nums, n);
+        System.out.println("The Concatenated array is: " + Arrays.toString(ans));
+    }
+
+    static int[] concatenation(int[] nums, int n){
         int[] ans = new int[2*n];
-        System.out.print("The Concatenated array is:");
         for(int i = 0; i < n; i++){
             ans[i] = nums[i];
             ans[i+n] = nums[i];
         }
-
-        System.out.println(Arrays.toString(ans));
+        return ans;
     }
 }
